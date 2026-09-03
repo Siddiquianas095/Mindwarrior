@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, send_from_directory
 import os
 
 app = Flask(__name__)
@@ -7,14 +7,14 @@ app.secret_key = "mind-warrior-secret-key"
 UPLOAD_FOLDER = "static/pdfs"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# Admin login
 ADMIN_USERNAME = "admin"
-ADMIN_PASSWORD = "12345"
+ADMIN_PASSWORD = "Mind123"
 
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    pdfs = os.listdir(UPLOAD_FOLDER)
+    return render_template("index.html", pdfs=pdfs)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -27,7 +27,10 @@ def login():
             session["admin"] = True
             return redirect(url_for("admin"))
 
-        return render_template("login.html", error="Wrong username or password!")
+        return render_template(
+            "login.html",
+            error="Wrong username or password!"
+        )
 
     return render_template("login.html")
 
@@ -43,9 +46,16 @@ def admin():
         if pdf and pdf.filename.lower().endswith(".pdf"):
             pdf.save(os.path.join(UPLOAD_FOLDER, pdf.filename))
 
+        return redirect(url_for("admin"))
+
     pdfs = os.listdir(UPLOAD_FOLDER)
 
     return render_template("admin.html", pdfs=pdfs)
+
+
+@app.route("/pdf/<filename>")
+def open_pdf(filename):
+    return send_from_directory(UPLOAD_FOLDER, filename)
 
 
 @app.route("/logout")

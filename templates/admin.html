@@ -58,8 +58,14 @@
                     {% for pdf in pdfs %}
 
                     <div class="pdf-item">
-                        📄 {{ pdf }}
-                    </div>
+    📄 {{ pdf }}
+
+    <a href="{{ url_for('open_pdf', filename=pdf) }}"
+       target="_blank"
+       class="main-button">
+        📖 Open PDF
+    </a>
+</div>
 
                     {% endfor %}
 
