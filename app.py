@@ -7,7 +7,7 @@ app.secret_key = "mind-warrior-secret-key"
 UPLOAD_FOLDER = "static/pdfs"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-ADMIN_USERNAME = "admin"
+ADMIN_USERNAME = "Admin"
 ADMIN_PASSWORD = "Mind123"
 
 
