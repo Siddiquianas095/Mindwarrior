@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login - Mind Warrior</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">🧠 Mind Warrior</div>
+
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <main class="login-page">
+
+        <div class="login-card">
+
+            <div class="login-icon">🔐</div>
+
+            <h1>Admin Login</h1>
+
+            <p>Only the website administrator can access this page.</p>
+
+            {% if error %}
+                <div class="error-message">
+                    {{ error }}
+                </div>
+            {% endif %}
+
+            <form method="POST">
+
+                <label>Username</label>
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter username"
+                    required
+                >
+
+                <label>Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit" class="main-button">
+                    🔓 Login
+                </button>
+
+            </form>
+
+            <a href="/" class="back-link">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Mind Warrior</p>
+        <p>Created by Anas</p>
+    </footer>
+
+</body>
+</html>

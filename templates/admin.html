@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - Mind Warrior</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">🧠 Mind Warrior</div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/logout">Logout 🔒</a>
+        </nav>
+    </header>
+
+    <main class="admin-page">
+
+        <div class="admin-card">
+
+            <div class="login-icon">👑</div>
+
+            <h1>Admin Dashboard</h1>
+
+            <p>Welcome, Admin! Here you can upload PDF files.</p>
+
+            <form method="POST" enctype="multipart/form-data">
+
+                <label>Select PDF</label>
+
+                <input
+                    type="file"
+                    name="pdf"
+                    accept=".pdf"
+                    required
+                >
+
+                <button type="submit" class="main-button">
+                    📤 Upload PDF
+                </button>
+
+            </form>
+
+            <hr>
+
+            <h2>Uploaded PDFs</h2>
+
+            {% if pdfs %}
+                <div class="pdf-list">
+
+                    {% for pdf in pdfs %}
+
+                    <div class="pdf-item">
+                        📄 {{ pdf }}
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+            {% else %}
+
+                <p>No PDFs uploaded yet.</p>
+
+            {% endif %}
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Mind Warrior</p>
+        <p>Created by Anas</p>
+    </footer>
+
+</body>
+</html>
