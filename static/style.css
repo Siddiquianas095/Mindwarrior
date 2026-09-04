@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    transition: 0.25s;
+    font-size: 15px;
+}
+
+.navbar nav a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.brain {
+    font-size: 80px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #cbd5e1;
+}
+
+.description {
+    max-width: 650px;
+    margin: 20px auto 30px;
+    line-height: 1.6;
+    font-size: 17px !important;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 12px;
+    background: #6366f1;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+    background: #818cf8;
+}
+
+.secondary-button {
+    background: #334155;
+}
+
+.secondary-button:hover {
+    background: #475569;
+}
+
+
+/* =========================
+   PDF PAGE
+========================= */
+
+.pdf-page {
+    min-height: calc(100vh - 80px);
+    padding: 60px 20px;
+}
+
+.pdf-card {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(15, 23, 42, 0.8);
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.pdf-card h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.pdf-subtitle {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   PDF LIST
+========================= */
+
+.pdf-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.pdf-item {
+    width: 100%;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    transition: 0.25s;
+}
+
+.pdf-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.pdf-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.pdf-icon {
+    font-size: 28px;
+}
+
+.pdf-info span:last-child {
+    word-break: break-word;
+}
+
+
+/* =========================
+   OPEN PDF BUTTON
+========================= */
+
+.open-button {
+    display: inline-block;
+    padding: 10px 17px;
+    background: #4f46e5;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: 0.25s;
+}
+
+.open-button:hover {
+    background: #6366f1;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ADMIN PAGE
+========================= */
+
+.admin-page {
+    min-height: calc(100vh - 80px);
+    padding: 60px 20px;
+}
+
+.admin-card {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.admin-card h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.admin-card h2 {
+    margin: 25px 0 18px;
+}
+
+.admin-card p {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   UPLOAD FORM
+========================= */
+
+.admin-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.admin-card input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #1e293b;
+    color: white;
+    border: 1px solid #475569;
+    border-radius: 10px;
+}
+
+.admin-card input[type="file"]::file-selector-button {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.admin-card hr {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    margin: 30px 0;
+}
+
+
+/* =========================
+   ADMIN ACTIONS
+========================= */
+
+.pdf-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.delete-form {
+    margin: 0;
+}
+
+.delete-button {
+    padding: 10px 17px;
+    border: none;
+    border-radius: 10px;
+    background: #dc2626;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.25s;
+}
+
+.delete-button:hover {
+    background: #ef4444;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.login-card h1 {
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.login-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.login-card label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 17px;
+    border-radius: 10px;
+    border: 1px solid #475569;
+    background: #1e293b;
+    color: white;
+    outline: none;
+}
+
+.login-card input:focus {
+    border-color: #818cf8;
+}
+
+.error {
+    color: #fca5a5 !important;
+    background: rgba(220, 38, 38, 0.15);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px !important;
+}
+
+
+/* =========================
+   EMPTY PDF
+========================= */
+
+.empty-pdf {
+    text-align: center;
+    padding: 50px 20px;
+    color: #cbd5e1;
+    font-size: 45px;
+}
+
+.empty-pdf p {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   BACK LINK
+========================= */
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #a5b4fc;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #94a3b8;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .hero {
+        padding: 45px 18px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .brain {
+        font-size: 65px;
+    }
+
+    .pdf-card,
+    .admin-card,
+    .login-card {
+        padding: 25px 18px;
+    }
+
+    .pdf-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pdf-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .pdf-actions a,
+    .pdf-actions form,
+    .open-button,
+    .delete-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pdf-info {
+        width: 100%;
+    }
+}

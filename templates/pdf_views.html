@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDF Views - Mind Warrior</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        🧠 Mind Warrior
+    </div>
+
+    <nav>
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/pdf-views">
+            📚 PDF Views
+        </a>
+
+        <a href="/login">
+            🔒 Admin Login
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="pdf-page">
+
+    <div class="pdf-card">
+
+        <h1>
+            📚 PDF Views
+        </h1>
+
+        <p class="pdf-subtitle">
+            Read and explore educational PDFs.
+        </p>
+
+
+        {% if pdfs %}
+
+            <div class="pdf-list">
+
+                {% for pdf in pdfs %}
+
+                    <div class="pdf-item">
+
+                        <div class="pdf-info">
+
+                            <span class="pdf-icon">
+                                📄
+                            </span>
+
+                            <span>
+                                {{ pdf }}
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="{{ url_for('open_pdf', filename=pdf) }}"
+                            target="_blank"
+                            class="open-button">
+
+                            📖 Open PDF
+
+                        </a>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% else %}
+
+            <div class="empty-pdf">
+
+                📭
+
+                <p>
+                    No PDFs available yet.
+                </p>
+
+            </div>
+
+        {% endif %}
+
+
+        <a href="/" class="back-link">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Mind Warrior
+    </p>
+
+    <p>
+        Created by Anas
+    </p>
+
+</footer>
+
+</body>
+
+</html>

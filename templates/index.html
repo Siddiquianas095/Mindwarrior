@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,47 +10,86 @@
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 
 <body>
 
-    <header class="navbar">
-        <div class="logo">🧠 Mind Warrior</div>
+<header class="navbar">
 
-        <nav>
-            <a href="/">Home</a>
-            <a href="/login">Admin Login 🔒</a>
-        </nav>
-    </header>
+    <div class="logo">
+        🧠 Mind Warrior
+    </div>
 
-    <main class="hero">
+    <nav>
 
-        <div class="hero-content">
+        <a href="/">Home</a>
 
-            <div class="brain">🧠</div>
+        <a href="/pdf-views">
+            📚 PDF Views
+        </a>
 
-            <h1>Mind Warrior</h1>
+        <a href="/login">
+            🔒 Admin Login
+        </a>
 
-            <p>
-                Learn • Read • Grow • Become a Mind Warrior
-            </p>
+    </nav>
 
-            <p class="description">
-                Explore useful PDF resources and improve your knowledge.
-            </p>
+</header>
 
-            <a href="/login" class="main-button">
+
+<main class="hero">
+
+    <div class="hero-content">
+
+        <div class="brain">
+            🧠
+        </div>
+
+        <h1>
+            Mind Warrior
+        </h1>
+
+        <p>
+            Learn • Read • Grow • Become a Mind Warrior
+        </p>
+
+        <p class="description">
+            Explore useful educational PDF resources and improve your knowledge.
+        </p>
+
+
+        <div class="home-buttons">
+
+            <a href="/pdf-views"
+               class="main-button">
+
+                📚 View PDFs
+
+            </a>
+
+
+            <a href="/login"
+               class="main-button secondary-button">
+
                 🔐 Admin Login
+
             </a>
 
         </div>
 
-    </main>
+    </div>
 
-    <footer>
-        <p>© 2026 Mind Warrior</p>
-        <p>Created by Anas</p>
-    </footer>
+</main>
+
+
+<footer>
+
+    <p>© 2026 Mind Warrior</p>
+    <p>Created by Anas</p>
+
+</footer>
 
 </body>
+
 </html>
